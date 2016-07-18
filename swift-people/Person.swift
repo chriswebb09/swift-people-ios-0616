@@ -13,6 +13,9 @@ class Person {
     var ageInYears: Int?
     var skills: [String]
     var qualifiedTutor: Bool {
+        if self.skills.count >= 4 {
+            return true
+        }
         return false
     }
     
@@ -31,23 +34,28 @@ class Person {
     }
     
     func learnSkillBash() {
+        self.skills.append("Bash")
         
     }
     
     func learnSkillXcode() {
-        
+        self.skills.append("XCode")
     }
     
     func learnSkillObjectiveC() {
-        
+        self.skills.append("Objective-C")
     }
     
     func learnSkillSwift() {
-        
+        self.skills.append("Swift")
     }
     
     func learnSkillInterfaceBuilder() {
-        
+        self.skills.append("InterfaceBuilder")
+    }
+    
+    func celebrateBirthday() -> String {
+        return "Birthday"
     }
     
 }
