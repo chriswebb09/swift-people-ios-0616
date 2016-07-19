@@ -55,7 +55,15 @@ class Person {
     }
     
     func celebrateBirthday() -> String {
-        return "Birthday"
+        var returnString: String = ""
+        if let newAge = self.ageInYears {
+            let birthdayAge = newAge + 1
+            returnString = "Happy \((birthdayAge).ordinal()) Birthday, \(self.name)!!!".uppercaseString
+        } else {
+            returnString = "Happy Birthday \(self.name)!!!"
+        }
+        
+        return returnString
     }
     
 }
